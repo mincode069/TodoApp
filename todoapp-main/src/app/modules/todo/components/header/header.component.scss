@@ -1,0 +1,16 @@
+.header {
+  background-color: #41106b;
+  height: 60px;
+  width: 100%;
+  .title {
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 18px;
+    .title__bold {
+      font-weight: 700;
+    }
+    .title__shadow {
+      opacity: 60%;
+    }
+  }
+}

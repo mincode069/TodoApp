@@ -1,0 +1,20 @@
+<div class="work__list">
+  <div class="list__title">
+    <div>
+      <span class="title__bold">{{ statusTitle }} </span>
+      <span class="title__shadow"> {{ statusCount }}</span>
+    </div>
+
+    <mat-icon (click)="openDelete()">more_vert</mat-icon>
+  </div>
+  <div class="list__scroll">
+    <app-work-item
+      (buttonClick)="editWork($event)"
+      *ngFor="let work of Works.filterWork(statusWork)"
+      [work]="work"
+      [(isDelete)]="isDelete"
+      [nowDate]="nowDate"
+    >
+    </app-work-item>
+  </div>
+</div>

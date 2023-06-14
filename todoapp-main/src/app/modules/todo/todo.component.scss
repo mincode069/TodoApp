@@ -1,0 +1,76 @@
+.app__main {
+  background-image: linear-gradient(to right, #4f2971, #633072);
+  min-height: calc(100% - 60px);
+
+  .main__divine {
+    display: flex;
+    flex-direction: row;
+    .main__left {
+      width: 70%;
+      padding: 30px;
+      .main__title {
+        display: flex;
+        justify-content: space-between;
+        app-button {
+          margin-left: 15px;
+        }
+
+        h2 {
+          padding: 4px 0;
+        }
+      }
+      .main__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        app-work-list {
+          width: 23%;
+        }
+      }
+    }
+    .main__right {
+      width: 30%;
+      border-left: 1px solid rgb(117, 70, 129);
+      padding: 30px;
+      .right__title {
+        margin: 4px 0;
+      }
+      .right__subtitle {
+        margin: 18px 0 6px;
+        display: flex;
+        justify-content: space-between;
+        h4 {
+          opacity: 60%;
+        }
+      }
+      .right__plan {
+        border-bottom: 1px solid rgb(117, 70, 129);
+        padding-bottom: 16px;
+        .plan__detail {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 16px;
+          .plan__hour {
+            .title__bold {
+              font-weight: 700;
+            }
+            .title__shadow {
+              opacity: 60%;
+            }
+          }
+          .plan__diaphragm {
+            width: 5px;
+            height: 40px;
+            border-radius: 2px;
+            background-color: rgb(255, 211, 55);
+          }
+          .plan__name {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

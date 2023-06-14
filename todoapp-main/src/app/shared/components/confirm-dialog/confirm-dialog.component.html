@@ -1,0 +1,22 @@
+<div class="dialog {{ (isDialog | async) ? 'Open' : '' }}">
+  <div class="dialog-form">
+    <div class="dialog-title">
+      <p>Are you sure want to delete :</p>
+      <h6>{{ nameWork }}</h6>
+    </div>
+    <div class="dialog-button">
+      <app-button
+        text="Cancel"
+        color="danger"
+        size="medium"
+        (click)="close()"
+      ></app-button>
+      <app-button
+        text="Yes"
+        color="primary"
+        size="medium"
+        (click)="deleteWork()"
+      ></app-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.planform__container {
+  width: calc(100% - 40px);
+  padding: 15px;
+  margin-top: 20px;
+  border: solid 2px rgb(164, 134, 172);
+  border-radius: 20px;
+  background-color: rgb(203, 208, 233);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px;
+  color: black;
+  .planform__input {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 20px;
+    .select__option {
+      width: 45%;
+      display: inline;
+      padding: 10px 0;
+      select {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #767987;
+        width: 90%;
+        padding: 7.5px 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .text__field {
+      width: 45%;
+    }
+  }
+  .planform__button {
+    color: var(--white);
+    margin-left: 75%;
+    app-button {
+      margin: 10px;
+    }
+  }
+}

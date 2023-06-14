@@ -1,0 +1,20 @@
+<div class="right__subtitle">
+  <h4>Today</h4>
+  <mat-icon>more_vert</mat-icon>
+</div>
+<div class="right__plan">
+  <app-plan-item
+    *ngFor="let plan of plans.filterPlan(nowDate)"
+    [plan]="plan"
+  ></app-plan-item>
+</div>
+<div class="right__subtitle">
+  <h4>Tomorrow</h4>
+  <mat-icon>more_vert</mat-icon>
+</div>
+<div class="right__plan">
+  <app-plan-item
+    *ngFor="let plan of plans.filterPlan(tomorrow)"
+    [plan]="plan"
+  ></app-plan-item>
+</div>

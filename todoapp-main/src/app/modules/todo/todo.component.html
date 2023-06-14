@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="app__main">
+  <div class="main__divine">
+    <div class="main__left">
+      <div class="main__title">
+        <h2>Todo website for learner</h2>
+        <div>
+          <app-button
+            text="New Work"
+            color="secondary"
+            size="huge"
+            (click)="toggleView(1)"
+          ></app-button>
+          <app-button
+            text="New Plan"
+            color="warning"
+            size="huge"
+            (click)="toggleView(2)"
+          ></app-button>
+        </div>
+      </div>
+      <div class="main__workform">
+        <app-work-form
+          [isEdit]="idEdit"
+          *ngIf="showFormWork"
+          (buttonClick)="toggleView($event)"
+        ></app-work-form>
+        <app-plan-form
+          *ngIf="showFormPlan"
+          (buttonClick)="toggleView($event)"
+        ></app-plan-form>
+      </div>
+      <div class="main__list">
+        <app-work-list
+          [statusWork]="this.statusEnum.pending"
+          (buttonClick)="editWork($event)"
+        ></app-work-list>
+        <app-work-list
+          [statusWork]="this.statusEnum.working"
+          (buttonClick)="editWork($event)"
+        ></app-work-list>
+        <app-work-list
+          [statusWork]="this.statusEnum.done"
+          (buttonClick)="editWork($event)"
+        ></app-work-list>
+        <app-work-list
+          [statusWork]="this.statusEnum.expired"
+          (buttonClick)="editWork($event)"
+        ></app-work-list>
+      </div>
+    </div>
+    <div class="main__right">
+      <div class="right__title"><h2>Calender</h2></div>
+      <div>
+        <app-plan-list></app-plan-list>
+      </div>
+    </div>
+  </div>
+  <app-confirm-dialog
+    [isDialog]="Work.isDialog"
+    (handleDelete)="Work.deleteWork()"
+    [nameWork]="Work.currentWork.value.name"
+    (closeDialog)="Work.closeDialog()"
+  ></app-confirm-dialog>
+</div>

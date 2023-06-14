@@ -1,0 +1,36 @@
+<div class="planform__container">
+  <div>
+    <form [formGroup]="planForm" class="planform__input">
+      <div class="select__option">
+        <select formControlName="name" required>
+          <option value="" disabled selected hidden>Name</option>
+          <option *ngFor="let work of works" value="{{ work }}">
+            {{ work }}
+          </option>
+        </select>
+      </div>
+
+      <div class="text__field">
+        <app-text-field
+          [type]="'datetime-local'"
+          formControlName="time"
+          text="Deadline"
+        ></app-text-field>
+      </div>
+    </form>
+    <div class="planform__button">
+      <app-button (click)="onToggle(2)" size="medium" color="main" text="Close">
+      </app-button>
+      <app-button
+        (click)="addPlan(planForm.value)"
+        color="primary"
+        text="save"
+        size="medium"
+        [isDisabled]="
+          planFormControl.name.invalid || planFormControl.time.invalid
+        "
+      >
+      </app-button>
+    </div>
+  </div>
+</div>

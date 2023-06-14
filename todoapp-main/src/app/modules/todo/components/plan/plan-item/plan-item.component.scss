@@ -1,0 +1,26 @@
+.plan__detail {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 50px;
+  .plan__hour {
+    width: 45%;
+    .title__bold {
+      font-weight: 700;
+    }
+  }
+  .plan__diaphragm {
+    width: 5px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: rgb(255, 211, 55);
+  }
+  .plan__name {
+    font-weight: 700;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

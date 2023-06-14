@@ -1,0 +1,68 @@
+button {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  color: var(--white-text);
+
+  &:disabled {
+    background-color: var(--disable);
+  }
+}
+
+.disable {
+  background-color: var(--disable);
+}
+
+button.medium {
+  min-width: 65px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+button.huge {
+  width: 135px;
+  height: 42px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+button.circle {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+button.primary {
+  background-color: var(--primary);
+  &:hover {
+    background-color: #1e90ff;
+  }
+}
+
+button.secondary {
+  background-color: var(--secondary);
+  &:hover {
+    background-color: #f56459;
+  }
+}
+
+button.warning {
+  background-color: var(--warning);
+  &:hover {
+    background-color: #fbc113;
+  }
+}
+
+button.main {
+  background-color: var(--main);
+  &:hover {
+    background-color: #f56459;
+  }
+}
+
+button.danger {
+  background-color: var(--danger);
+  &:hover {
+    background-color: #f56459;
+  }
+}

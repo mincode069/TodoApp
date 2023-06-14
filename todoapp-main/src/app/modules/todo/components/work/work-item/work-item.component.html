@@ -1,0 +1,36 @@
+<div class="workitem__container">
+  <div class="workitem__content">
+    <h1>{{ work.name }}</h1>
+    <mat-icon *ngIf="isDelete" (click)="deleteWork(work)">clear</mat-icon>
+  </div>
+  <div class="workitem__progress">
+    <mat-progress-bar
+      mode="determinate"
+      value="{{ payload.percent }}"
+      [color]="color"
+    ></mat-progress-bar>
+  </div>
+  <div class="workitem__timeleft" *ngIf="showDayLeft">
+    <p>{{ payload.dayLeft + 1 }} days left</p>
+    <p>/</p>
+    <p>{{ work.intended }} days</p>
+  </div>
+  <div class="workitem__notification">
+    <p>{{ payload.notification }}</p>
+  </div>
+
+  <div class="workitem__deadline">
+    <p>{{ work.deadline | date : "short" }}</p>
+  </div>
+  <div class="workitem__control" *ngIf="isUpdate">
+    <app-button
+      (click)="updateStatus(work)"
+      text="Update"
+      color="secondary"
+      size="medium"
+    ></app-button>
+    <div>
+      <mat-icon (click)="editWork(work)">more_vert</mat-icon>
+    </div>
+  </div>
+</div>

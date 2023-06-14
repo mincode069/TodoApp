@@ -1,0 +1,15 @@
+<button
+  [class.disable]="color === 'disable'"
+  [class.background]="color === 'background'"
+  [class.primary]="color === 'primary'"
+  [class.secondary]="color === 'secondary'"
+  [class.main]="color === 'main'"
+  [class.danger]="color === 'danger'"
+  [class.warning]="color === 'warning'"
+  [disabled]="isDisabled"
+  [class.huge]="size === 'huge'"
+  [class.medium]="size === 'medium'"
+  [class.circle]="size === 'circle'"
+>
+  {{ text }}
+</button>

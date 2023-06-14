@@ -1,0 +1,46 @@
+.workitem__container {
+  border-radius: 15px;
+  background-color: rgb(235, 236, 240);
+  border: 2px solid rgb(222, 220, 220);
+  padding: 15px;
+  margin-top: 20px;
+  .workitem__content {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    mat-icon {
+      margin-top: 4px;
+    }
+  }
+  .workitem__timeleft {
+    display: flex;
+    justify-content: space-between;
+  }
+  .workitem__notification {
+    background-color: var(--warning);
+    border-radius: 5px;
+    p {
+      text-align: center;
+      color: var(--white);
+      border-radius: 6px;
+    }
+  }
+  .workitem__progress {
+    margin-bottom: 10px;
+    width: 100%;
+    mat-progress-bar {
+      border-radius: 3px;
+    }
+  }
+  .workitem__control {
+    display: flex;
+    justify-content: space-between;
+    app-button {
+      color: var(--white);
+    }
+  }
+}

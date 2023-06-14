@@ -1,0 +1,38 @@
+<div class="workform__container">
+  <div>
+    <form [formGroup]="workForm" class="workform__input">
+      <app-text-field
+        [type]="'text'"
+        formControlName="name"
+        text="Work name"
+      ></app-text-field>
+      <app-text-field
+        [type]="'number'"
+        formControlName="intended"
+        text="Intended time (days)"
+        [min]="0"
+      ></app-text-field>
+      <app-text-field
+        [type]="'datetime-local'"
+        formControlName="deadline"
+        text="Deadline"
+      ></app-text-field>
+    </form>
+  </div>
+  <div class="workform__button">
+    <app-button (click)="onToggle(1)" size="medium" color="main" text="Close">
+    </app-button>
+    <app-button
+      (click)="addNewWork(workForm.value)"
+      color="primary"
+      text="{{ actionBtn }}"
+      size="medium"
+      [isDisabled]="
+        workFormControl.name.invalid ||
+        workFormControl.intended.invalid ||
+        workFormControl.deadline.invalid
+      "
+    >
+    </app-button>
+  </div>
+</div>

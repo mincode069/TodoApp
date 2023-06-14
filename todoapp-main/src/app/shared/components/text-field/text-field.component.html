@@ -1,0 +1,10 @@
+<div class="input__container">
+  <input
+    [type]="type"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+    [min]="min"
+    required
+  />
+  <label>{{ text }} *</label>
+</div>
